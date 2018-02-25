@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KallingKard</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_heroku">Heroku</string>
+</resources>
