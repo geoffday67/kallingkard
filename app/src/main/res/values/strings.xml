@@ -2,4 +2,15 @@
     <string name="app_name">KallingKard</string>
     <string name="menu_home">Home</string>
     <string name="menu_heroku">Heroku</string>
+
+    <string name="heroku">Heroku</string>
+    <string name="close">CLOSE</string>
+    <string name="reverse">REVERSE</string>
+    <string name="source">SOURCE</string>
+
+    <string name="heroku_text">
+        Enter some text above then click the button to send the text to a node.js application running on Heroku to reverse it.
+        There may be a delay while the Heroku instance starts up.
+        Click below to see the source code on Github.
+    </string>
 </resources>

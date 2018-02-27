@@ -8,4 +8,34 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="profile_card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="cardBackgroundColor">@color/colorPrimaryLight</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="profile_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="profile_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColor">#b2ffffff</item>
+    </style>
+
 </resources>
