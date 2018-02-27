@@ -2,9 +2,12 @@ package uk.co.sullenart.kallingkard
 
 import android.app.Application
 import timber.log.Timber
+import uk.co.sullenart.kallingkard.injection.DaggerMainComponent
+import uk.co.sullenart.kallingkard.injection.MainComponent
+import uk.co.sullenart.kallingkard.injection.MainModule
 
 class MainApplication : Application() {
-    //lateinit var component: DataComponent
+    lateinit var component: MainComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -13,10 +16,10 @@ class MainApplication : Application() {
             Timber.plant(Timber.DebugTree())
         }
 
-        /*Stetho.initializeWithDefaults(this);
+        //Stetho.initializeWithDefaults(this);
 
-        component = DaggerDataComponent.builder()
-                .dataModule(DataModule(this))
-                .build()*/
+        component = DaggerMainComponent.builder()
+                .mainModule(MainModule(this))
+                .build()
     }
 }

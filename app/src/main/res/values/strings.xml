@@ -7,6 +7,7 @@
     <string name="close">CLOSE</string>
     <string name="reverse">REVERSE</string>
     <string name="source">SOURCE</string>
+    <string name="empty_error">Enter some text</string>
 
     <string name="heroku_text">
         Enter some text above then click the button to send the text to a node.js application running on Heroku to reverse it.

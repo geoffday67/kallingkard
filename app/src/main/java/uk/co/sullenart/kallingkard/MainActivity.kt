@@ -53,7 +53,6 @@ class MainActivity : BaseActivity(R.layout.activity_main), NavigationView.OnNavi
         fragment?.let {
             fragmentManager.beginTransaction()
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
                     .replace(R.id.fragment_container, fragment)
                     .commitAllowingStateLoss()
         }

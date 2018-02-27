@@ -8,7 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="profile_card">
+    <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ProfileCard">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
@@ -17,7 +21,7 @@
         <item name="cardUseCompatPadding">true</item>
     </style>
 
-    <style name="profile_title">
+    <style name="ProfileTitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingBottom">16dp</item>
@@ -28,7 +32,7 @@
         <item name="android:textColor">#ffffffff</item>
     </style>
 
-    <style name="profile_content">
+    <style name="ProfileContent">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingBottom">24dp</item>
