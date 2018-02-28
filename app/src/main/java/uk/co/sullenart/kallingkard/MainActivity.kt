@@ -52,16 +52,14 @@ class MainActivity : BaseActivity(R.layout.activity_main), NavigationView.OnNavi
             }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        item.isChecked = true
-        drawerLayout.closeDrawers()
-
         val fragment = when (item.itemId) {
             R.id.nav_heroku -> HerokuFragment.create()
             R.id.nav_home -> HomeFragment.create()
             else -> null
         }
-
         fragment?.let { showFragment(it) }
+
+        drawerLayout.closeDrawers()
 
         return true
     }

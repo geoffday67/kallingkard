@@ -36,7 +36,7 @@
         \nAssembler (x86, ARM)
     </string>
     <string name="primary_libraries">
-        Reactive (Rx)
+        Reactive (Rx 2)
         \nDagger 2
         \nRetrofit/OkHttp
         \nButterknife
