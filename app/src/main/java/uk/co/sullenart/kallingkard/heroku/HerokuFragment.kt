@@ -1,4 +1,4 @@
-package uk.co.sullenart.kallingkard
+package uk.co.sullenart.kallingkard.heroku
 
 import android.content.Intent
 import android.net.Uri
@@ -12,6 +12,9 @@ import butterknife.OnClick
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
 import timber.log.Timber
+import uk.co.sullenart.kallingkard.BaseFragment
+import uk.co.sullenart.kallingkard.MainApplication
+import uk.co.sullenart.kallingkard.R
 import javax.inject.Inject
 
 class HerokuFragment : BaseFragment() {

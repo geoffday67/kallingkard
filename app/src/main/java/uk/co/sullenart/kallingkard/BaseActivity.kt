@@ -12,6 +12,5 @@ open class BaseActivity(@LayoutRes private val content: Int) : AppCompatActivity
         super.onCreate(savedInstanceState)
         setContentView(content)
         ButterKnife.bind(this)
-        //(application as MainApplication).component.inject(this)
     }
 }

@@ -1,0 +1,324 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Introduction -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:id="@+id/home_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="16dp" />
+
+        <TextView
+            android:id="@+id/home_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/home_image"
+            android:text="Geoff Day"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline">
+        </TextView>
+
+        <TextView
+            android:id="@+id/home_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_name"
+            android:layout_toEndOf="@id/home_image"
+            android:text="@string/geoff_email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1">
+        </TextView>
+
+        <TextView
+            android:id="@+id/home_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_image"
+            android:text="@string/home_introduction"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1">
+        </TextView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/horz_divider"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Primary skills"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_skills"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Development languages"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_languages"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Libraries"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_libraries"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Dyson"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Android developer 1/18 -"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_dyson"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Xing"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Android developer 5/17 - 12/17"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_xing"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Radiodetection"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Android developer 1/17 - 4/17"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_radiodetection"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Abaco"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Windows driver developer 9/16 - 12/16"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_abaco"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Mubaloo"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Android developer 6/16 - 8/16"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_mubaloo"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Babcock"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Android \u0026 web developer 9/15 - 4/16"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_babcock"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Motorola (Zebra)"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="Senior Software Architect 2009 - 2015"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_zebra"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Interaxis and FMK"/>
+
+                    <TextView
+                        style="@style/ProfileSubtitle"
+                        android:text="1998 - 2009 Company owner"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_interaxis"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/ProfileCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ProfileTitle"
+                        android:text="Education"/>
+
+                    <TextView
+                        style="@style/ProfileContent"
+                        android:text="@string/primary_education"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KallingKard</string>
+    <string name="app_name">Calling Card</string>
     <string name="menu_home">Home</string>
     <string name="menu_heroku">Heroku</string>
 
@@ -14,4 +14,83 @@
         There may be a delay while the Heroku instance starts up.
         Click below to see the source code on Github.
     </string>
+
+    <string name="home_introduction">
+        Hello, have a look through my profile below, and slide from the left to see the other sections of this app.
+        Please click the icons above to contact me, or to view the source code for this app.
+    </string>
+    <string name="primary_skills">
+        Android design and development
+        \nWeb services and REST APIs
+        \nApp hosting (Heroku, Amazon Web Services)
+        \nUnit testing
+        \nTest driven development and Agile
+        \nContinuous integration and automatic testing
+        \nTechnical team leadership
+    </string>
+    <string name="primary_languages">
+        Java (Android, desktop, JNI)
+        \nKotlin (Android)
+        \nC/C++
+        \nJavaScript (node.js, Express, socket.io)
+        \nAssembler (x86, ARM)
+    </string>
+    <string name="primary_libraries">
+        Reactive (Rx)
+        \nDagger 2
+        \nRetrofit/OkHttp
+        \nButterknife
+        \nGlide/Picasso
+        \nMockito
+    </string>
+    <string name="primary_dyson">
+        Part of a close team of Android, iOS and cloud developers, testers, UI designers and scrum facilitators, adding new features to the Dyson Link app to support new products.
+        The app uses MVVM architecture, and multiple modules and flavours. The development cycle is supported by the Atlassian suite (Jira, Bamboo, Stash, Hipchat).
+    </string>
+    <string name="primary_xing">
+        Working within a large distributed team, responsible for the re-development of a major section of the client’s app using MVP architecture.
+        Also porting existing Cucumber (Calabash) tests from the iOS app to Android. Extensive use of the back-end cloud API using background tasks.
+        Thorough unit test coverage of the logic (presenter) layer using Mockito.
+    </string>
+    <string name="primary_radiodetection">
+        The client manufactures specialist hardware with both Bluetooth Classic and Bluetooth Low Energy capabilities and needed an Android app to communicate with it.
+        The app was also required to interface to a web REST service and a local Realm ORM database. There was an existing app but it needed overhauling to increase reliability and add features.
+        Designed and developed a new architecture using modern Android development practices including Rx, Dagger, Retrofit, OkHttp, Material Design and automated stress testing,
+        together with direct use of Android APIs for Bluetooth connectivity.
+    </string>
+    <string name="primary_abaco">
+        The client needed a low-level driver and access API to support custom hardware.
+        Addressed issues with existing build system then designed and wrote a Windows hardware driver using C/C++.
+        Designed and wrote an access API to the end-user’s requirements, again in C/C++.
+        Many technical challenges were involved, e.g. working on custom hardware without usual PC connectivity, cross-platform debugging, low-level hardware interaction.
+    </string>
+    <string name="primary_mubaloo">
+        Developed Android applications to customer specifications, working within a small team of other Android developers, iOS developers and UX/UI designers.
+        Worked within tight timescales, using digital assets supplied by the design team, ensuring that the app had a consistent look-and-feel across platforms.
+        Apps used MVP, Reactive and dependency injection, and interacted with several web services using Retrofit/OkHttp.
+    </string>
+    <string name="primary_babcock">
+        Led the development of a tablet-based Android app to enable efficient data collection.
+        Restrictions on the target environment meant the need for inventive solutions to data transfer - implemented
+        low-level socket proxies over USB to allow use of mobile database synchronisation (Couchbase).
+        Implemented web front and back ends for dynamic UI on the device (Java REST and Server Faces).
+    </string>
+    <string name="primary_zebra">
+        I worked with the other architects on the design of a new mobile enterprise app development toolkit,
+        then ran a team of Windows Mobile/CE and Android developers in its implementation.
+        The project required in-depth Android knowledge, including GUI, logic, architecture and JNI/NDK,
+        targeting both enterprise and consumer Android devices.
+        \nI oversaw the collaboration of the UK team with teams in other countries to integrate Motorola’s own product with the Rhodes product to create the RhoMobileSuite cross platform development framework.
+        \nI led the design and implementation of a CI/ATS framework, running on Amazon EC-2 instances. It uses REST APIs, implemented in node.js, to enable globally distributed mobile devices to execute test suites.
+        By using the Github and S3 APIs it performs cloud-based test builds.
+    </string>
+    <string name="primary_interaxis">
+        These were my own companies where I employed a small team developing custom solutions in the data collection and mobile data processing industry.
+        I ran all aspects of the business: I understood customers’ requirements, I won the contract, I designed the solution and organised the team to deliver it.
+        \nDevelopment was principally in C# .NET, but also used cross-compiled C for embedded systems.
+    </string>
+    <string name="primary_education">
+        I left school in 1985 with 5 A-levels (Maths, Further Maths, Physics, Chemistry, General Studies) and went on to study Maths at King\'s College, London.
+    </string>
+
 </resources>

@@ -6,6 +6,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowButtonStyle">@style/overflowButtonStyle</item>
+    </style>
+
+    <style name="overflowButtonStyle" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@android:color/white</item>
     </style>
 
     <style name="ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
@@ -36,6 +41,20 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingBottom">24dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColor">#b2ffffff</item>
+    </style>
+
+    <style name="ProfileSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <!-- Undo the bottom padding on the title style -->
+        <item name="android:layout_marginTop">-16dp</item>
+
+        <item name="android:paddingBottom">16dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>

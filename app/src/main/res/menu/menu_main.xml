@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+
+    <item android:id="@+id/action_source"
+          android:title="Source on Github"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+
+    <!--
+    <item
+        android:id="@+id/action_sms"
+        android:icon="@drawable/ic_textsms_white"
+        android:title="sms"
+        app:showAsAction="always"/>
+    -->
+
+    <item
+        android:id="@+id/action_email"
+        android:icon="@drawable/ic_email_white"
+        android:title="Email"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_phone"
+        android:icon="@drawable/ic_phone_white"
+        android:title="Phone"
+        app:showAsAction="always"/>
+</menu>

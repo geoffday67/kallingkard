@@ -1,4 +1,4 @@
-package uk.co.sullenart.kallingkard
+package uk.co.sullenart.kallingkard.heroku
 
 import io.reactivex.Single
 import retrofit2.Retrofit
