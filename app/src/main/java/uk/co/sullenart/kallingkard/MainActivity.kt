@@ -2,6 +2,8 @@ package uk.co.sullenart.kallingkard
 
 import android.app.Fragment
 import android.app.FragmentTransaction
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -12,6 +14,7 @@ import android.view.MenuItem
 import butterknife.BindView
 import uk.co.sullenart.kallingkard.heroku.HerokuFragment
 import uk.co.sullenart.kallingkard.home.HomeFragment
+import uk.co.sullenart.kallingkard.lambda.LambdaFragment
 
 class MainActivity : BaseActivity(R.layout.activity_main), NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,19 +45,50 @@ class MainActivity : BaseActivity(R.layout.activity_main), NavigationView.OnNavi
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean =
-            when (item?.itemId) {
-                android.R.id.home -> {
-                    drawerLayout.openDrawer(GravityCompat.START)
-                    true
-                }
-                else -> super.onOptionsItemSelected(item)
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_phone -> phoneCall()
+            R.id.action_email -> sendEmail()
+            R.id.action_source -> showSource()
+            android.R.id.home -> drawerLayout.openDrawer(GravityCompat.START)
+            else -> return super.onOptionsItemSelected(item)
+        }
+
+        return true
+    }
+
+    private fun sendEmail() {
+        Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(resources.getString(R.string.geoff_email)))
+            putExtra(Intent.EXTRA_SUBJECT, "Enquiry from CallingCard")
+            resolveActivity(packageManager)?.let {
+                startActivity(this)
             }
+        }
+    }
+
+    private fun phoneCall() {
+        Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:" + resources.getString(R.string.geoff_phone))
+            resolveActivity(packageManager)?.let {
+                startActivity(this)
+            }
+        }
+    }
+
+    private fun showSource() {
+        val uri = Uri.parse("https://github.com/geoffday67/kallingkard/tree/master/app/src/main/java/uk/co/sullenart/kallingkard")
+        Intent(Intent.ACTION_VIEW, uri).apply {
+            startActivity(this)
+        }
+    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val fragment = when (item.itemId) {
             R.id.nav_heroku -> HerokuFragment.create()
             R.id.nav_home -> HomeFragment.create()
+            R.id.nav_lambda -> LambdaFragment.create()
             else -> null
         }
         fragment?.let { showFragment(it) }

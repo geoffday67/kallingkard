@@ -2,11 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_menu_home"
         android:title="@string/menu_home" />
 
     <item
         android:id="@+id/nav_heroku"
-        android:icon="@drawable/ic_heroku"
+        android:icon="@drawable/ic_menu_heroku"
         android:title="@string/menu_heroku" />
+
+    <item
+        android:id="@+id/nav_lambda"
+        android:icon="@drawable/ic_menu_lambda"
+        android:title="@string/menu_lambda" />
 </menu>

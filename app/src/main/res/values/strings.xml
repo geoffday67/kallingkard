@@ -2,17 +2,24 @@
     <string name="app_name">Calling Card</string>
     <string name="menu_home">Home</string>
     <string name="menu_heroku">Heroku</string>
+    <string name="menu_lambda">AWS Lambda</string>
 
     <string name="heroku">Heroku</string>
     <string name="close">CLOSE</string>
     <string name="reverse">REVERSE</string>
     <string name="source">SOURCE</string>
+    <string name="capitalise">CAPITALISE</string>
     <string name="empty_error">Enter some text</string>
+    <string name="device_name">You\'re using a %1s</string>
 
     <string name="heroku_text">
         Enter some text above then click the button to send the text to a node.js application running on Heroku to reverse it.
         There may be a delay while the Heroku instance starts up.
         Click below to see the source code on Github.
+    </string>
+    <string name="lambda_text">
+        Enter some text above then click the button to send the text to an AWS Lambda function to reverse it, and to see which device AWS thinks you are using.
+        Click below to see the source code.
     </string>
 
     <string name="home_introduction">

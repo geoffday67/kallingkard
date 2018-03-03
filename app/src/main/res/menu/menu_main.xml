@@ -8,23 +8,15 @@
           android:orderInCategory="100"
           app:showAsAction="never"/>
 
-    <!--
-    <item
-        android:id="@+id/action_sms"
-        android:icon="@drawable/ic_textsms_white"
-        android:title="sms"
-        app:showAsAction="always"/>
-    -->
-
     <item
         android:id="@+id/action_email"
-        android:icon="@drawable/ic_email_white"
+        android:icon="@drawable/ic_menu_email"
         android:title="Email"
-        app:showAsAction="always"/>
+        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_phone"
-        android:icon="@drawable/ic_phone_white"
+        android:icon="@drawable/ic_menu_phone"
         android:title="Phone"
-        app:showAsAction="always"/>
+        app:showAsAction="ifRoom"/>
 </menu>

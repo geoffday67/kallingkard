@@ -1,4 +1,4 @@
-package uk.co.sullenart.kallingkard.heroku
+package uk.co.sullenart.kallingkard.lambda
 
 import android.content.Intent
 import android.net.Uri
@@ -14,44 +14,48 @@ import butterknife.OnClick
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
-import timber.log.Timber
 import uk.co.sullenart.kallingkard.BaseFragment
 import uk.co.sullenart.kallingkard.MainApplication
 import uk.co.sullenart.kallingkard.R
 import javax.inject.Inject
 
-class HerokuFragment : BaseFragment() {
+class LambdaFragment : BaseFragment() {
 
     companion object {
-        fun create() = HerokuFragment()
+        fun create() = LambdaFragment()
     }
 
     @Inject
-    lateinit var herokuReverser: HerokuReverser
+    lateinit var lambdaCapitaliser: LambdaCapitaliser
 
-    @BindView(R.id.heroku_input)
-    lateinit var herokuInput: EditText
+    @BindView(R.id.lambda_input)
+    lateinit var lambdaInput: EditText
 
     inner class ResultsHolder {
-        @BindView(R.id.heroku_reverse_result)
-        lateinit var herokuReverseResult: TextView
+        @BindView(R.id.lambda_capitalise_result)
+        lateinit var lambdaCapitaliseResult: TextView
+
+        @BindView(R.id.lambda_device_result)
+        lateinit var lambdaDeviceResult: TextView
     }
+
     private val results = ResultsHolder()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         (activity.application as MainApplication).component.inject(this)
 
-        val root = super.onCreateView(R.layout.fragment_heroku, inflater, container, savedInstanceState)
-        val resultView = inflater.inflate(R.layout.heroku_result, container, false)
+        val root = super.onCreateView(R.layout.fragment_lambda, inflater, container, savedInstanceState)
+        val resultView = inflater.inflate(R.layout.lambda_result, container, false)
         progressResult.addView(resultView)
         ButterKnife.bind(results, progressResult)
 
         return root
     }
 
-    @OnClick(R.id.heroku_reverse)
-    fun onReverseClick() {
-        val input = herokuInput.text.toString()
+    @OnClick(R.id.lambda_capitalise)
+    fun onCapitaliseClick() {
+
+        val input = lambdaInput.text.toString()
 
         if (input.isEmpty()) {
             showError(R.string.empty_error)
@@ -59,14 +63,15 @@ class HerokuFragment : BaseFragment() {
             return
         }
 
-        hideKeyboard(herokuInput)
+        hideKeyboard(lambdaInput)
         showWaiting()
 
-        herokuReverser.reverse(herokuInput.text.toString())
+        lambdaCapitaliser.capitalise(input)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(onSuccess = {
-                    results.herokuReverseResult.text = it ?: ""
+                    results.lambdaCapitaliseResult.text = it.uppercase
+                    results.lambdaDeviceResult.text = resources.getString(R.string.device_name, it.device)
                     showResult()
                 }, onError = { showError(it.message); hideWaiting() })
     }
@@ -76,9 +81,9 @@ class HerokuFragment : BaseFragment() {
         hideWaiting()
     }
 
-    @OnClick(R.id.heroku_github)
+    @OnClick(R.id.lambda_github)
     fun onSourceClick() {
-        val uri = Uri.parse("https://github.com/geoffday67/callingcard-heroku/blob/master/index.js")
+        val uri = Uri.parse("https://github.com/geoffday67/callingcard-lambda/blob/master/capitalise.js")
         startActivity(Intent(Intent.ACTION_VIEW, uri))
     }
 }

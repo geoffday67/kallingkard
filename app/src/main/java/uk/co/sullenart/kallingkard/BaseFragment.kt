@@ -30,9 +30,9 @@ open class BaseFragment : Fragment() {
 
     @Nullable
     @BindView(R.id.progress_result)
-    lateinit var resultText: TextView
+    lateinit var progressResult: ViewGroup
 
-    fun onCreateView(contentId: Int, inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    fun onCreateView(contentId: Int, inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         super.onCreateView(inflater, container, savedInstanceState)
 
         (activity.application as MainApplication).component.inject(this)
@@ -44,14 +44,13 @@ open class BaseFragment : Fragment() {
 
     protected fun showWaiting() {
         progressBar.visibility = View.VISIBLE
-        resultText.visibility = View.INVISIBLE
+        progressResult.visibility = View.INVISIBLE
         progressLayout.visibility = View.VISIBLE
     }
 
-    protected fun showResult(result: String) {
-        resultText.text = result
-        resultText.visibility = View.VISIBLE
+    protected fun showResult() {
         progressBar.visibility = View.INVISIBLE
+        progressResult.visibility = View.VISIBLE
     }
 
     protected fun hideWaiting() {
