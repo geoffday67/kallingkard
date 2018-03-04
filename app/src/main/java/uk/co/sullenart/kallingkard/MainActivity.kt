@@ -3,6 +3,7 @@ package uk.co.sullenart.kallingkard
 import android.app.Fragment
 import android.app.FragmentTransaction
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -11,6 +12,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import butterknife.BindView
 import uk.co.sullenart.kallingkard.heroku.HerokuFragment
 import uk.co.sullenart.kallingkard.home.HomeFragment
@@ -35,6 +37,11 @@ class MainActivity : BaseActivity(R.layout.activity_main), NavigationView.OnNavi
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_menu)
         }
+
+
+        val source = BitmapFactory.decodeResource(resources, R.drawable.avatar)
+        navView.getHeaderView(0).findViewById<ImageView>(R.id.nav_header_image)
+                .setImageBitmap(getRoundedBitmap(source))
 
         navView.setNavigationItemSelectedListener(this)
         showFragment(HomeFragment())

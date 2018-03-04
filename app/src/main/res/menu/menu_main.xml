@@ -4,19 +4,19 @@
       tools:context=".MainActivity">
 
     <item android:id="@+id/action_source"
-          android:title="Source on Github"
+          android:title="@string/action_source_title"
           android:orderInCategory="100"
           app:showAsAction="never"/>
 
     <item
         android:id="@+id/action_email"
         android:icon="@drawable/ic_menu_email"
-        android:title="Email"
+        android:title="@string/action_email_title"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_phone"
         android:icon="@drawable/ic_menu_phone"
-        android:title="Phone"
+        android:title="@string/action_phone_title"
         app:showAsAction="ifRoom"/>
 </menu>

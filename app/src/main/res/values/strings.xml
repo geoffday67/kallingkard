@@ -11,6 +11,9 @@
     <string name="capitalise">CAPITALISE</string>
     <string name="empty_error">Enter some text</string>
     <string name="device_name">You\'re using a %1s</string>
+    <string name="action_source_title">View source on Github</string>
+    <string name="action_email_title">Email</string>
+    <string name="action_phone_title">Phone</string>
 
     <string name="heroku_text">
         Enter some text above then click the button to send the text to a node.js application running on Heroku to reverse it.
